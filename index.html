@@ -9,7 +9,10 @@
 </head>
 <body>
     <div id="app">
-        {{ mensagem }}, {{ resume }}
+       <a v-bind:href="site">Site</a>
+       <p v-bind:class="cor">Entendendo a diretava</p>
+       <input type="text" v-bind:placeholder="place" >
+       <input type="checkbox" :checked="check" >
     </div>
 
     <script>
@@ -17,8 +20,13 @@
         const vm = new Vue({
             el: '#app',
             data: {
-                mensagem: 'Primeiro template controlado pelo Vue',
-                resume : 'Resumo'
+               site: '#',
+               cor:"vermelho",
+               place: "sdrdf",
+               check : true
+            },
+            methods:{
+               
             }
         })
 
